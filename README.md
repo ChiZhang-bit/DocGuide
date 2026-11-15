@@ -121,6 +121,19 @@ Python 3.10 or newer is required. Python dependencies are listed in `requirement
 - `transformers == 5.5.1`
 - `safetensors == 0.7.0`
 
+## Setting API Keys
+
+Before running the code, you need to set your `model`, `api_key`, and `base_url` in `utils/llm/config.py`.
+
+## Model Download
+
+Due to their large size, the embedding and reranker checkpoints are hosted on Google Drive. Download them using the links below:
+
+- **Embedding model**: [Download](https://drive.google.com/file/d/1Dmbz46sp_RG3lCvZUO4aVzzuXh3HaE_E/view?usp=sharing)
+- **Reranker model**: [Download](https://drive.google.com/file/d/1FzPFh9h_dVjQpeAkVnCXxdZB44wLDw5b/view?usp=sharing)
+
+Place the downloaded checkpoints in `model/embedding/` and `model/reranker/`, respectively.
+
 ## Running the Code
 
 Set the dataset and model paths in `run.sh`, then run:
@@ -140,17 +153,3 @@ Method prompts are stored in `prompt/`:
 - **`repair_suffix.md`**: Local repair instructions.
 - **`row_template.md`**: Row-description template generation.
 - **`component_*.md`**: Shared stage instructions.
-
-
-## Setting API Keys
-
-Before running the code, you need to set your `model`, `api_key`, and `base_url` in `utils/llm/config.py`.
-
-## Model Download
-
-Due to their large size, the embedding and reranker checkpoints are hosted on Google Drive. Download them using the links below:
-
-- **Embedding model**: [Download](https://drive.google.com/file/d/1Dmbz46sp_RG3lCvZUO4aVzzuXh3HaE_E/view?usp=sharing)
-- **Reranker model**: [Download](https://drive.google.com/file/d/1FzPFh9h_dVjQpeAkVnCXxdZB44wLDw5b/view?usp=sharing)
-
-Place the downloaded checkpoints in `model/embedding/` and `model/reranker/`, respectively.
